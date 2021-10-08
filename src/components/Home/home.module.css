@@ -1,0 +1,88 @@
+:root {
+    --logo: #393939;
+    --menu: #c4eef7;
+    --hover: #f9fefe;
+    --res: #0ac1d9;
+    --font: "Raleway", sans-serif;
+}
+.main_div {
+    display: grid;
+    grid-template-columns: 10rem 5fr 10rem 5fr;
+    grid-template-rows: 10rem 5rem 10rem;
+    width: 100%;
+    height: 100%;
+    font-family: var(--font);
+}
+.left_head {
+    display: grid;
+    grid-column: 2/3;
+    grid-row: 2/5;
+    color: var(--logo);
+    text-align: left;
+}
+.left_head1 {
+    color: var(--res);
+}
+.left_button {
+    width: 7rem;
+    padding: 0.3rem;
+    border-radius: 2rem;
+    border: none;
+    outline: none;
+    background-color: var(--res);
+    color: white;
+    font-weight: 700;
+}
+.left_button:hover {
+    background: none;
+    border: 2px solid var(--res);
+    color: var(--logo);
+    padding: 0.1rem;
+}
+.right_div {
+    /* margin-top: 0.1rem; */
+    display: grid;
+    grid-column: 4/5;
+    background-image: url(./image/home-backsssss.png);
+    background-size: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+}
+.images {
+    width: 100%;
+}
+@media screen and (max-width: 1080px) {
+    .main_div {
+        display: grid;
+        grid-template-columns: 5rem 4fr 5rem 4fr;
+        grid-template-rows: 7rem 4rem 7rem;
+    }
+    .left_button {
+        width: 7rem;
+        padding: 0.7rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    .left_button:hover {
+        padding: 0.7rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main_div {
+        display: grid;
+        grid-template-columns: 2rem 4fr 4fr;
+        grid-template-rows: 7rem 4rem;
+    }
+    .left_head {
+        display: grid;
+        grid-column: 3/5;
+        grid-row: 2/5;
+    }
+    .right_div {
+        display: grid;
+        grid-column: 4/5;
+        grid-row: 6/7;
+        background: none;
+    }
+}
