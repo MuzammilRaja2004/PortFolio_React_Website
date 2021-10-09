@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import './navbar.css'
 import './images/navbar.png'
 // Icon Link
@@ -7,7 +7,7 @@ import { FaBars } from "react-icons/fa";
 
 function Navbar() {
 
-    const [ShowMediaIcons,setShowMediaIcons] = useState(false);
+    const [ShowMediaIcons, setShowMediaIcons] = useState(false);
 
     return (
         <div>
@@ -17,7 +17,7 @@ function Navbar() {
                     <h2>Logo</h2>
                 </div>
 
-                <div className= {ShowMediaIcons ? "menu-link mobile-menu-link" : "menu-links"}>
+                <div className={ShowMediaIcons ? "menu-link mobile-menu-link" : "menu-links"}>
                     <ul>
 
                         <li>
@@ -39,18 +39,28 @@ function Navbar() {
                         <li>
                             <Link to="/contact">Contact</Link>
                         </li>
-
+                        <div className="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
+                            <label class="form-check-label" for="flexSwitchCheckDefault">
+                            </label>
+                            </div>
                     </ul>
+                    
                 </div>
 
-                <div className="color-mode">
+                {/* <div className="color-mode">
                     <ul className="color-mode-desktop">
-                        <label htmlFor="/">Dark Mode</label>
+                        <div className="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
+                            <label class="form-check-label" for="flexSwitchCheckDefault">
+                                
+                            </label>
+                        </div>
                     </ul>
-                </div>
+                </div> */}
 
                 <div className="hamburger-menu">
-                    <Link to="#" onClick={()=> setShowMediaIcons(!ShowMediaIcons)}> <FaBars /> </Link>
+                    <Link to="#" onClick={() => setShowMediaIcons(!ShowMediaIcons)}> <FaBars /> </Link>
                 </div>
             </nav>
         </div>
